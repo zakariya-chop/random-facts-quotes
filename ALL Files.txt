@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Facts & Quotes Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    main {
+      padding: 50px 20px;
+    }
+    #quote {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 1em;
+    }
+    input[type="submit"] {
+      background: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Random Facts & Quotes Hub</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <div id="quote">Click the button to get a random fact or quote!</div>
+    <button onclick="generateQuote()">New Quote</button>
+  </main>
+
+  <main id="about">
+    <h2>About Us</h2>
+    <p>Welcome to Random Facts & Quotes Hub!<br/>
+      We share daily motivational quotes and interesting facts to inspire you.<br/>
+      Created by Zakariya as a learning project 🚀
+    </p>
+  </main>
+
+  <main id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Your Email" required/>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <input type="submit" value="Send Message"/>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Zakariya Chop — All rights reserved.
+  </footer>
+
+  <script>
+    const quotes = [
+      "Believe you can and you're halfway there.",
+      "The best way to predict the future is to invent it.",
+      "Don’t watch the clock; do what it does. Keep going.",
+      "You are stronger than you think.",
+      "Small steps every day lead to big results.",
+      "Stay positive, work hard, make it happen.",
+      "Dream big. Work hard. Stay humble.",
+      "Success is the sum of small efforts repeated day in and day out."
+    ];
+
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').textContent = quotes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
